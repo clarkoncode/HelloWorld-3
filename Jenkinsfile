@@ -17,7 +17,7 @@ pipeline
                     """)
                     powershell ("""
                         \$fileName = [DateTime]::Now.ToString("yyyyMMdd-HHmmss") + ".zip";
-                        New-Item -Path "C:\\Temp\\$fileName";
+                        New-Item -Path "C:\\Temp\\\$fileName";
                     """)
                 }
             }
