@@ -8,6 +8,10 @@ pipeline
             {
                 script
                 {
+                    powershell ("""
+                        \$fileName = [DateTime]::Now.ToString("yyyyMMdd-HHmmss") + ".zip";
+                        New-Item -Path "C:\Temp\\$fileName";
+                    """)
                     powershell "New-Item -Path \"C:\\Temp\\HelloWorld3-${[DateTime]::Now.ToString(\"yyyyMMdd-HHmmss\") + \".zip\"}\""
                 }
             }
