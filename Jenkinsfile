@@ -11,8 +11,8 @@ pipeline
                 script
                 {
                     powershell ("""
-                        \$name = \"Nate\"
-                        Write-Host \"Hello World\"
+                        \$name = "Nate"
+                        Write-Host "Hello World"
                         Write-Host \$name
                     """)
                     powershell ("""
